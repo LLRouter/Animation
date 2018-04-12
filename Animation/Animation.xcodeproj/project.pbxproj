@@ -614,7 +614,7 @@
 				DEVELOPMENT_TEAM = 854WB9SEC4;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "/Users/eastday/Desktop/测试/Animation/Animation/AnimationHeader.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Animation/AnimationHeader.pch";
 				INFOPLIST_FILE = Animation/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -648,7 +648,7 @@
 				DEVELOPMENT_TEAM = 854WB9SEC4;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "/Users/eastday/Desktop/测试/Animation/Animation/AnimationHeader.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Animation/AnimationHeader.pch";
 				INFOPLIST_FILE = Animation/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

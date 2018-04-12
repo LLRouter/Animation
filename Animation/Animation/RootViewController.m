@@ -41,7 +41,7 @@
     [self creatTable];
     //[self createView];
     //  [self labelMade];
-    // [self imageLabel];
+   // [self imageLabel];
     // Do any additional setup after loading the view, typically from a nib.、
     [self testBlock];
     [self.tabelView addObserver:self forKeyPath:@"contentOffset" options:NSKeyValueObservingOptionNew context:nil];
