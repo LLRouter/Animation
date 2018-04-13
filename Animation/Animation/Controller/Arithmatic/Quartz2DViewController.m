@@ -7,6 +7,7 @@
 //
 
 #import "Quartz2DViewController.h"
+#import "Quartz2dView.h"
 
 @interface Quartz2DViewController ()
 
@@ -16,7 +17,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = UIColor.whiteColor;
     // Do any additional setup after loading the view.
+    Quartz2dView *quartz = [[Quartz2dView alloc] init];
+    quartz.frame = self.view.frame;
+    [self.view addSubview:quartz];
 }
 
 @end

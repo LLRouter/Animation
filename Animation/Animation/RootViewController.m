@@ -15,6 +15,7 @@
 #import "Aspects.h"
 #import "ArithmeticViewController.h"
 #import <WAAppRouting/WAAppRouting.h>
+#import "Quartz2DViewController.h"
 
 @interface RootViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -141,7 +142,7 @@
     self.tabelView.delegate = self;
     self.tabelView.dataSource = self;
     [self.view addSubview:self.tabelView];
-    self.dataArray = [NSMutableArray arrayWithArray:@[@"Present视图",@"字体",@"CirclePresent",@"Reactive Cocoa",@"Arithmetic"]];
+    self.dataArray = [NSMutableArray arrayWithArray:@[@"Present视图",@"字体",@"CirclePresent",@"Reactive Cocoa",@"Arithmetic",@"Quartz2D"]];
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -176,6 +177,9 @@
             break;
         case 4 :
             vc = [ArithmeticViewController new];
+            break;
+        case 5:
+            vc = [Quartz2DViewController new];
             break;
         default:
             break;

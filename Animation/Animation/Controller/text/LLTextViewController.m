@@ -46,7 +46,7 @@
     [label  sizeToFit];
     [self.view addSubview:label];
     [label mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.view).offset(40);
+        make.top.equalTo(_otherContainerView).offset(40);
         make.bottom.right.equalTo(self.view).offset(-20);
     }];
     
