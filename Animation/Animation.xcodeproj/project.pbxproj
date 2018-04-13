@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		F32393E61FBAB71C00AED156 /* LLTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F32393E51FBAB71B00AED156 /* LLTextViewController.m */; };
 		F32394041FBAE12300AED156 /* HighLightTextStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = F32394031FBAE12300AED156 /* HighLightTextStorage.m */; };
+		F32C4D7420804B270073FD47 /* Quartz2DViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F32C4D7320804B270073FD47 /* Quartz2DViewController.m */; };
 		F32EA45C1FB15E820009D1AD /* LLThreadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F32EA45B1FB15E820009D1AD /* LLThreadViewController.m */; };
 		F33B225D1FAAE0770085EFF1 /* CircleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F33B225C1FAAE0770085EFF1 /* CircleViewController.m */; };
 		F33B22601FAAE0C80085EFF1 /* CircleNextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F33B225F1FAAE0C80085EFF1 /* CircleNextViewController.m */; };
@@ -49,6 +50,8 @@
 		F32394021FBAE12300AED156 /* HighLightTextStorage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HighLightTextStorage.h; sourceTree = "<group>"; };
 		F32394031FBAE12300AED156 /* HighLightTextStorage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HighLightTextStorage.m; sourceTree = "<group>"; };
 		F3281C941FA8166600116303 /* talk@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "talk@2x.png"; sourceTree = "<group>"; };
+		F32C4D7220804B270073FD47 /* Quartz2DViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Quartz2DViewController.h; sourceTree = "<group>"; };
+		F32C4D7320804B270073FD47 /* Quartz2DViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Quartz2DViewController.m; sourceTree = "<group>"; };
 		F32EA45A1FB15E820009D1AD /* LLThreadViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLThreadViewController.h; sourceTree = "<group>"; };
 		F32EA45B1FB15E820009D1AD /* LLThreadViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLThreadViewController.m; sourceTree = "<group>"; };
 		F33B225B1FAAE0770085EFF1 /* CircleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CircleViewController.h; sourceTree = "<group>"; };
@@ -152,6 +155,7 @@
 		F3281C951FA84B3A00116303 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				F32C4D7520804B750073FD47 /* views */,
 				F342DEF81FA9B54E00C6C93D /* LLInterActiveTransition.h */,
 				F342DEF91FA9B54E00C6C93D /* LLInterActiveTransition.m */,
 				F33E05EF2016D0F000A87A0D /* Arithmatic */,
@@ -172,6 +176,13 @@
 			path = OpenTool;
 			sourceTree = "<group>";
 		};
+		F32C4D7520804B750073FD47 /* views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
 		F32EA4591FB15E140009D1AD /* LockAndThread */ = {
 			isa = PBXGroup;
 			children = (
@@ -187,6 +198,8 @@
 				F33E05F02016D16000A87A0D /* ArithmeticViewController.h */,
 				F33E05F12016D16000A87A0D /* ArithmeticViewController.m */,
 				F33E05F22016D16000A87A0D /* ArithmeticViewController.xib */,
+				F32C4D7220804B270073FD47 /* Quartz2DViewController.h */,
+				F32C4D7320804B270073FD47 /* Quartz2DViewController.m */,
 			);
 			path = Arithmatic;
 			sourceTree = "<group>";
@@ -471,6 +484,7 @@
 				F378657B1FAC650E00B51E73 /* LLBlockTool.m in Sources */,
 				F33E05F32016D16000A87A0D /* ArithmeticViewController.m in Sources */,
 				F3F118221F6A5C86000897BE /* AppDelegate.m in Sources */,
+				F32C4D7420804B270073FD47 /* Quartz2DViewController.m in Sources */,
 				F33B22631FAAE5F10085EFF1 /* CircleViewControllerTrasition.m in Sources */,
 				F342DEFA1FA9B54E00C6C93D /* LLInterActiveTransition.m in Sources */,
 				F32EA45C1FB15E820009D1AD /* LLThreadViewController.m in Sources */,
