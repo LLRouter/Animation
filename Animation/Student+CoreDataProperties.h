@@ -2,7 +2,7 @@
 //  Student+CoreDataProperties.h
 //  
 //
-//  Created by dfw on 2018/4/16.
+//  Created by dfw on 2018/4/17.
 //
 //
 
@@ -15,9 +15,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (NSFetchRequest<Student *> *)fetchRequest;
 
+@property (nullable, nonatomic, copy) NSNumber *studentAge;
+@property (nullable, nonatomic, copy) NSNumber *studentId;
 @property (nullable, nonatomic, copy) NSString *studentName;
-@property (nonatomic) int32_t studentAge;
-@property (nonatomic) int16_t studentId;
+@property (nullable, nonatomic, retain) StudentClass *relationship;
 
 @end
 

@@ -2,12 +2,14 @@
 //  Student+CoreDataClass.h
 //  
 //
-//  Created by dfw on 2018/4/16.
+//  Created by dfw on 2018/4/17.
 //
 //
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+
+@class StudentClass;
 
 NS_ASSUME_NONNULL_BEGIN
 

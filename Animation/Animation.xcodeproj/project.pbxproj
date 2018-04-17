@@ -12,8 +12,6 @@
 		F32C4D7420804B270073FD47 /* Quartz2DViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F32C4D7320804B270073FD47 /* Quartz2DViewController.m */; };
 		F32C4D782080524D0073FD47 /* Quartz2dView.m in Sources */ = {isa = PBXBuildFile; fileRef = F32C4D772080524D0073FD47 /* Quartz2dView.m */; };
 		F32EA45C1FB15E820009D1AD /* LLThreadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F32EA45B1FB15E820009D1AD /* LLThreadViewController.m */; };
-		F3333C4B208439B20027CA07 /* Student+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = F3333C49208439B20027CA07 /* Student+CoreDataProperties.m */; };
-		F3333C4C208439B20027CA07 /* Student+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = F3333C4A208439B20027CA07 /* Student+CoreDataClass.m */; };
 		F3333C5020844BB60027CA07 /* navigation_back_pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F3333C4F20844B170027CA07 /* navigation_back_pressed@2x.png */; };
 		F33B225D1FAAE0770085EFF1 /* CircleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F33B225C1FAAE0770085EFF1 /* CircleViewController.m */; };
 		F33B22601FAAE0C80085EFF1 /* CircleNextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F33B225F1FAAE0C80085EFF1 /* CircleNextViewController.m */; };
@@ -39,7 +37,6 @@
 		F3F118221F6A5C86000897BE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F118211F6A5C86000897BE /* AppDelegate.m */; };
 		F3F118251F6A5C86000897BE /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F118241F6A5C86000897BE /* RootViewController.m */; };
 		F3F118281F6A5C86000897BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3F118261F6A5C86000897BE /* Main.storyboard */; };
-		F3F1182B1F6A5C86000897BE /* Animation.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F3F118291F6A5C86000897BE /* Animation.xcdatamodeld */; };
 		F3F1182D1F6A5C86000897BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3F1182C1F6A5C86000897BE /* Assets.xcassets */; };
 		F3F118301F6A5C86000897BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3F1182E1F6A5C86000897BE /* LaunchScreen.storyboard */; };
 		FA6A4755FCB6250330BDF110 /* Pods_Animation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D9D9FAE319D7A6AAB2A6A3D /* Pods_Animation.framework */; };
@@ -49,6 +46,7 @@
 		5A5F5EFBDA811376D40E4B56 /* Pods-Animation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Animation.release.xcconfig"; path = "Pods/Target Support Files/Pods-Animation/Pods-Animation.release.xcconfig"; sourceTree = "<group>"; };
 		5D9D9FAE319D7A6AAB2A6A3D /* Pods_Animation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Animation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B675823BC7DEB0C9700950D6 /* Pods-Animation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Animation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Animation/Pods-Animation.debug.xcconfig"; sourceTree = "<group>"; };
+		F30A179C2085DE03002A5D0A /* Animation.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Animation.xcdatamodel; sourceTree = "<group>"; };
 		F32393E41FBAB71B00AED156 /* LLTextViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLTextViewController.h; sourceTree = "<group>"; };
 		F32393E51FBAB71B00AED156 /* LLTextViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLTextViewController.m; sourceTree = "<group>"; };
 		F32394021FBAE12300AED156 /* HighLightTextStorage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HighLightTextStorage.h; sourceTree = "<group>"; };
@@ -60,10 +58,6 @@
 		F32C4D772080524D0073FD47 /* Quartz2dView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Quartz2dView.m; sourceTree = "<group>"; };
 		F32EA45A1FB15E820009D1AD /* LLThreadViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLThreadViewController.h; sourceTree = "<group>"; };
 		F32EA45B1FB15E820009D1AD /* LLThreadViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLThreadViewController.m; sourceTree = "<group>"; };
-		F3333C47208439B10027CA07 /* Student+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Student+CoreDataProperties.h"; path = "/Users/eastday/Desktop/测试/Animation/Animation/Animation/Controller/Arithmatic/Student+CoreDataProperties.h"; sourceTree = "<absolute>"; };
-		F3333C48208439B20027CA07 /* Student+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Student+CoreDataClass.h"; path = "/Users/eastday/Desktop/测试/Animation/Animation/Animation/Controller/Arithmatic/Student+CoreDataClass.h"; sourceTree = "<absolute>"; };
-		F3333C49208439B20027CA07 /* Student+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "Student+CoreDataProperties.m"; path = "/Users/eastday/Desktop/测试/Animation/Animation/Animation/Controller/Arithmatic/Student+CoreDataProperties.m"; sourceTree = "<absolute>"; };
-		F3333C4A208439B20027CA07 /* Student+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "Student+CoreDataClass.m"; path = "/Users/eastday/Desktop/测试/Animation/Animation/Animation/Controller/Arithmatic/Student+CoreDataClass.m"; sourceTree = "<absolute>"; };
 		F3333C4F20844B170027CA07 /* navigation_back_pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigation_back_pressed@2x.png"; sourceTree = "<group>"; };
 		F33B225B1FAAE0770085EFF1 /* CircleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CircleViewController.h; sourceTree = "<group>"; };
 		F33B225C1FAAE0770085EFF1 /* CircleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CircleViewController.m; sourceTree = "<group>"; };
@@ -114,7 +108,6 @@
 		F3F118231F6A5C86000897BE /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		F3F118241F6A5C86000897BE /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		F3F118271F6A5C86000897BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F3F1182A1F6A5C86000897BE /* Animation.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Animation.xcdatamodel; sourceTree = "<group>"; };
 		F3F1182C1F6A5C86000897BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F3F1182F1F6A5C86000897BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F3F118311F6A5C86000897BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -216,10 +209,6 @@
 		F33E05EF2016D0F000A87A0D /* Arithmatic */ = {
 			isa = PBXGroup;
 			children = (
-				F3333C48208439B20027CA07 /* Student+CoreDataClass.h */,
-				F3333C4A208439B20027CA07 /* Student+CoreDataClass.m */,
-				F3333C47208439B10027CA07 /* Student+CoreDataProperties.h */,
-				F3333C49208439B20027CA07 /* Student+CoreDataProperties.m */,
 				F33E05F02016D16000A87A0D /* ArithmeticViewController.h */,
 				F33E05F12016D16000A87A0D /* ArithmeticViewController.m */,
 				F33E05F22016D16000A87A0D /* ArithmeticViewController.xib */,
@@ -299,6 +288,7 @@
 		F3F118111F6A5C85000897BE = {
 			isa = PBXGroup;
 			children = (
+				F30A179B2085DE03002A5D0A /* Animation.xcdatamodeld */,
 				F3F1181C1F6A5C86000897BE /* Animation */,
 				F3F1181B1F6A5C86000897BE /* Products */,
 				DC8E2CF03265B1B528FF14B3 /* Pods */,
@@ -330,7 +320,6 @@
 				F3F1182C1F6A5C86000897BE /* Assets.xcassets */,
 				F3F1182E1F6A5C86000897BE /* LaunchScreen.storyboard */,
 				F3F118311F6A5C86000897BE /* Info.plist */,
-				F3F118291F6A5C86000897BE /* Animation.xcdatamodeld */,
 				F3F1181D1F6A5C86000897BE /* Supporting Files */,
 			);
 			path = Animation;
@@ -508,7 +497,6 @@
 				F342DEF61FA9A91C00C6C93D /* PresentViewController.m in Sources */,
 				F364C8291FFB2047002440E2 /* UIFont+CustomFont.m in Sources */,
 				F32393E61FBAB71C00AED156 /* LLTextViewController.m in Sources */,
-				F3333C4B208439B20027CA07 /* Student+CoreDataProperties.m in Sources */,
 				F378657B1FAC650E00B51E73 /* LLBlockTool.m in Sources */,
 				F33E05F32016D16000A87A0D /* ArithmeticViewController.m in Sources */,
 				F3F118221F6A5C86000897BE /* AppDelegate.m in Sources */,
@@ -516,10 +504,8 @@
 				F33B22631FAAE5F10085EFF1 /* CircleViewControllerTrasition.m in Sources */,
 				F342DEFA1FA9B54E00C6C93D /* LLInterActiveTransition.m in Sources */,
 				F32EA45C1FB15E820009D1AD /* LLThreadViewController.m in Sources */,
-				F3333C4C208439B20027CA07 /* Student+CoreDataClass.m in Sources */,
 				F3413E551FBD307F0039CFA4 /* LLTextContainer.m in Sources */,
 				F32C4D782080524D0073FD47 /* Quartz2dView.m in Sources */,
-				F3F1182B1F6A5C86000897BE /* Animation.xcdatamodeld in Sources */,
 				F33B225D1FAAE0770085EFF1 /* CircleViewController.m in Sources */,
 				F37C91FF1FBED8E7009D019B /* MathTest.m in Sources */,
 				F3F1181F1F6A5C86000897BE /* main.m in Sources */,
@@ -742,13 +728,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		F3F118291F6A5C86000897BE /* Animation.xcdatamodeld */ = {
+		F30A179B2085DE03002A5D0A /* Animation.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				F3F1182A1F6A5C86000897BE /* Animation.xcdatamodel */,
+				F30A179C2085DE03002A5D0A /* Animation.xcdatamodel */,
 			);
-			currentVersion = F3F1182A1F6A5C86000897BE /* Animation.xcdatamodel */;
-			path = Animation.xcdatamodeld;
+			currentVersion = F30A179C2085DE03002A5D0A /* Animation.xcdatamodel */;
+			name = Animation.xcdatamodeld;
+			path = Animation/Animation.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

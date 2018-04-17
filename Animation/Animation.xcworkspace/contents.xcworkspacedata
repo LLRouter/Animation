@@ -2,6 +2,30 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Student+CoreDataClass.h">
+   </FileRef>
+   <FileRef
+      location = "group:Student+CoreDataClass.m">
+   </FileRef>
+   <FileRef
+      location = "group:Student+CoreDataProperties.h">
+   </FileRef>
+   <FileRef
+      location = "group:Student+CoreDataProperties.m">
+   </FileRef>
+   <FileRef
+      location = "group:StudentClass+CoreDataClass.h">
+   </FileRef>
+   <FileRef
+      location = "group:StudentClass+CoreDataClass.m">
+   </FileRef>
+   <FileRef
+      location = "group:StudentClass+CoreDataProperties.h">
+   </FileRef>
+   <FileRef
+      location = "group:StudentClass+CoreDataProperties.m">
+   </FileRef>
+   <FileRef
       location = "group:Animation.xcodeproj">
    </FileRef>
    <FileRef

@@ -2,7 +2,7 @@
 //  Student+CoreDataProperties.m
 //  
 //
-//  Created by dfw on 2018/4/16.
+//  Created by dfw on 2018/4/17.
 //
 //
 
@@ -14,8 +14,9 @@
 	return [[NSFetchRequest alloc] initWithEntityName:@"Student"];
 }
 
-@dynamic studentName;
 @dynamic studentAge;
 @dynamic studentId;
+@dynamic studentName;
+@dynamic relationship;
 
 @end
