@@ -20,6 +20,7 @@
 		F33E05F32016D16000A87A0D /* ArithmeticViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F33E05F12016D16000A87A0D /* ArithmeticViewController.m */; };
 		F33E05F42016D16000A87A0D /* ArithmeticViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F33E05F22016D16000A87A0D /* ArithmeticViewController.xib */; };
 		F3413E551FBD307F0039CFA4 /* LLTextContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = F3413E541FBD307F0039CFA4 /* LLTextContainer.m */; };
+		F34258A5208736AE00B6B2E3 /* Animation.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F30A179B2085DE03002A5D0A /* Animation.xcdatamodeld */; };
 		F342DEF51FA9A91100C6C93D /* PresentNextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F342DEED1FA9A7E100C6C93D /* PresentNextViewController.m */; };
 		F342DEF61FA9A91C00C6C93D /* PresentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F342DEF01FA9A7E100C6C93D /* PresentViewController.m */; };
 		F342DEF71FA9A91F00C6C93D /* PresentViewTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = F342DEF31FA9A7E100C6C93D /* PresentViewTransition.m */; };
@@ -500,6 +501,7 @@
 				F378657B1FAC650E00B51E73 /* LLBlockTool.m in Sources */,
 				F33E05F32016D16000A87A0D /* ArithmeticViewController.m in Sources */,
 				F3F118221F6A5C86000897BE /* AppDelegate.m in Sources */,
+				F34258A5208736AE00B6B2E3 /* Animation.xcdatamodeld in Sources */,
 				F32C4D7420804B270073FD47 /* Quartz2DViewController.m in Sources */,
 				F33B22631FAAE5F10085EFF1 /* CircleViewControllerTrasition.m in Sources */,
 				F342DEFA1FA9B54E00C6C93D /* LLInterActiveTransition.m in Sources */,

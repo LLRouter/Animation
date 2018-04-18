@@ -2,7 +2,7 @@
 //  Student+CoreDataProperties.h
 //  
 //
-//  Created by dfw on 2018/4/17.
+//  Created by dfw on 2018/4/18.
 //
 //
 
@@ -18,6 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, copy) NSNumber *studentAge;
 @property (nullable, nonatomic, copy) NSNumber *studentId;
 @property (nullable, nonatomic, copy) NSString *studentName;
+@property (nullable, nonatomic, copy) NSString *sex;
 @property (nullable, nonatomic, retain) StudentClass *relationship;
 
 @end

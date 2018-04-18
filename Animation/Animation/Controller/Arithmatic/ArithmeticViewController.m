@@ -13,6 +13,7 @@
 #import "Student+CoreDataClass.h"
 #import "Student+CoreDataProperties.h"
 #import "StudentClass+CoreDataClass.h"
+#import "Books+CoreDataClass.h"
 
 #define  MainApplication ((AppDelegate *)[UIApplication sharedApplication].delegate)
 
@@ -100,8 +101,12 @@
     student.studentAge = @20;
     student.studentName = @"Mr.L";
     student.relationship = class;
+    student.sex = @"男";
    
     [class addRelationshipObject:student]; //如果不想加这句可以在coredata 模型里面的relationship设置双向关联（inverse）
+    Books *book = [NSEntityDescription insertNewObjectForEntityForName:@"Books" inManagedObjectContext:delegate.persistentContainer.viewContext];
+    book.bookName = @"SSSSS";
+    book.price = @20;
     
     [delegate saveContext];
 }

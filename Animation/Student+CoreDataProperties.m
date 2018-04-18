@@ -2,7 +2,7 @@
 //  Student+CoreDataProperties.m
 //  
 //
-//  Created by dfw on 2018/4/17.
+//  Created by dfw on 2018/4/18.
 //
 //
 
@@ -17,6 +17,7 @@
 @dynamic studentAge;
 @dynamic studentId;
 @dynamic studentName;
+@dynamic sex;
 @dynamic relationship;
 
 @end
