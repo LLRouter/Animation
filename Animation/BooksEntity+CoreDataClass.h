@@ -1,5 +1,5 @@
 //
-//  Books+CoreDataClass.h
+//  BooksEntity+CoreDataClass.h
 //  
 //
 //  Created by dfw on 2018/4/18.
@@ -11,10 +11,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Books : NSManagedObject
+@interface BooksEntity : NSManagedObject
 
 @end
 
 NS_ASSUME_NONNULL_END
 
-#import "Books+CoreDataProperties.h"
+#import "BooksEntity+CoreDataProperties.h"

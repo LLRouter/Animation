@@ -13,7 +13,7 @@
 #import "Student+CoreDataClass.h"
 #import "Student+CoreDataProperties.h"
 #import "StudentClass+CoreDataClass.h"
-#import "Books+CoreDataClass.h"
+#import "BooksEntity+CoreDataClass.h"
 
 #define  MainApplication ((AppDelegate *)[UIApplication sharedApplication].delegate)
 
@@ -24,13 +24,16 @@
 @end
 
 @implementation ArithmeticViewController
-
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear: animated];
+    self.navigationController.navigationBarHidden = YES;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = UIColor.whiteColor;
     // Do any additional setup after loading the view from its nib.
     [self testMaoPao];
-    
 //    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
 //    btn.frame = CGRectMake(20, 100, 100, 40);
 //    [btn setTitle:@"read" forState:UIControlStateNormal];
@@ -70,7 +73,7 @@
     };
     [self.view addSubview:btnClass];
     
-    
+    // 修改导航栏返回按钮
     if (@available(iOS 11.0,*)){
         [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(-200, 0) forBarMetrics:UIBarMetricsDefault];
         
@@ -104,7 +107,7 @@
     student.sex = @"男";
    
     [class addRelationshipObject:student]; //如果不想加这句可以在coredata 模型里面的relationship设置双向关联（inverse）
-    Books *book = [NSEntityDescription insertNewObjectForEntityForName:@"Books" inManagedObjectContext:delegate.persistentContainer.viewContext];
+    BooksEntity *book = [NSEntityDescription insertNewObjectForEntityForName:@"BooksEntity" inManagedObjectContext:delegate.persistentContainer.viewContext];
     book.bookName = @"SSSSS";
     book.price = @20;
     
@@ -129,6 +132,7 @@
     // Specify how the fetched objects should be sorted
     NSError *error = nil;
     NSArray *fetchedObjects = [MainApplication.persistentContainer.viewContext executeFetchRequest:fetchRequest error:&error];
+
     if (fetchedObjects == nil) {
         
     }else{
@@ -163,6 +167,7 @@
     // Specify how the fetched objects should be sorted
     NSError *error = nil;
     NSArray *fetchedObjects = [MainApplication.persistentContainer.viewContext executeFetchRequest:fetchRequest error:&error];
+    
     if (fetchedObjects == nil) {
         
     }else{

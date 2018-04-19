@@ -18,6 +18,7 @@
 #import "LLInterActiveTransition.h"
 #import "ReactiveCocoa.h"
 #import "NSObject+DLIntrospection.h"
+#import "UINavigationController+FDFullscreenPopGesture.h"
 
 #define NSLog(format, ...) do {                                                                          \
 fprintf(stderr, "<%s : %d> %s\n",                                           \

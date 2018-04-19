@@ -2,16 +2,16 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Books+CoreDataClass.h">
+      location = "group:BooksEntity+CoreDataClass.h">
    </FileRef>
    <FileRef
-      location = "group:Books+CoreDataClass.m">
+      location = "group:BooksEntity+CoreDataClass.m">
    </FileRef>
    <FileRef
-      location = "group:Books+CoreDataProperties.h">
+      location = "group:BooksEntity+CoreDataProperties.h">
    </FileRef>
    <FileRef
-      location = "group:Books+CoreDataProperties.m">
+      location = "group:BooksEntity+CoreDataProperties.m">
    </FileRef>
    <FileRef
       location = "group:Student+CoreDataClass.h">

@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '742F5C2E00FD3FA0780034D3D89562A7'
-               BlueprintName = 'ReactiveCocoa'
+               BlueprintIdentifier = '0F71FC248875B67F53494C44B17B40EB'
+               BlueprintName = 'FDFullscreenPopGesture'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'ReactiveCocoa.framework'>
+               BuildableName = 'FDFullscreenPopGesture.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

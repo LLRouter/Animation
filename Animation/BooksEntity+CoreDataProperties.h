@@ -1,19 +1,19 @@
 //
-//  Books+CoreDataProperties.h
+//  BooksEntity+CoreDataProperties.h
 //  
 //
 //  Created by dfw on 2018/4/18.
 //
 //
 
-#import "Books+CoreDataClass.h"
+#import "BooksEntity+CoreDataClass.h"
 
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Books (CoreDataProperties)
+@interface BooksEntity (CoreDataProperties)
 
-+ (NSFetchRequest<Books *> *)fetchRequest;
++ (NSFetchRequest<BooksEntity *> *)fetchRequest;
 
 @property (nullable, nonatomic, copy) NSString *bookName;
 @property (nullable, nonatomic, copy) NSNumber *price;

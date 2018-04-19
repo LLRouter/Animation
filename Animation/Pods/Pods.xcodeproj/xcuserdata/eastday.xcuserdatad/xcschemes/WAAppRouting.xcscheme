@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '7B63052C039B33DC1257DB1601EFD651'
+               BlueprintIdentifier = 'EBBC7E8333497C50DC8E6B9C472C8D20'
                BlueprintName = 'WAAppRouting'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'WAAppRouting.framework'>

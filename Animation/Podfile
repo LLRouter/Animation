@@ -10,4 +10,5 @@ target 'Animation' do
   pod 'MLeaksFinder'
   pod 'Masonry'
   pod 'WAAppRouting'
+  pod 'FDFullscreenPopGesture'
 end

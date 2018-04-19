@@ -169,7 +169,7 @@ for (unsigned int i = 0; i<count; i++) {
         NSLog(@"1111");
     }];
     ///[blo start] 直接调用是在主线程执行
-    //blo addExecutionBlock:<#^(void)block#> 添加的是子线程执行
+    //blo addExecutionBlock:<#^(void)block#> block添加的是子线程执行
     [queue addOperation:blo];
     
     NSOperationQueue * queue2 = [NSOperationQueue mainQueue];
@@ -179,7 +179,7 @@ for (unsigned int i = 0; i<count; i++) {
     NSThread *thread = [[NSThread alloc] initWithTarget:self selector:@selector(learnMethod) object:nil];
     [thread start];
     [NSThread detachNewThreadWithBlock:^{
-    
+      
     }];
 //    [self performSelectorInBackground:<#(nonnull SEL)#> withObject:<#(nullable id)#>]
 //    [self performSelectorOnMainThread:<#(nonnull SEL)#> withObject:<#(nullable id)#> waitUntilDone:<#(BOOL)#>]
