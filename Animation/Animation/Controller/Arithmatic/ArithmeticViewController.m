@@ -20,6 +20,7 @@
 @interface ArithmeticViewController ()
 
 @property(nonatomic)UITextField * predicate;
+@property(nonatomic)NSPersistentStoreCoordinator *psc;
 
 @end
 
@@ -73,6 +74,8 @@
     };
     [self.view addSubview:btnClass];
     
+    [self doTestThreadCoredata];
+    
     // 修改导航栏返回按钮
     if (@available(iOS 11.0,*)){
         [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(-200, 0) forBarMetrics:UIBarMetricsDefault];
@@ -107,10 +110,7 @@
     student.sex = @"男";
    
     [class addRelationshipObject:student]; //如果不想加这句可以在coredata 模型里面的relationship设置双向关联（inverse）
-    BooksEntity *book = [NSEntityDescription insertNewObjectForEntityForName:@"BooksEntity" inManagedObjectContext:delegate.persistentContainer.viewContext];
-    book.bookName = @"SSSSS";
-    book.price = @20;
-    
+ 
     [delegate saveContext];
 }
 - (void)doReadClass
@@ -190,6 +190,32 @@
 //如果设置教室相对于学生的删除关联为Cascade，则表示：如果删除学生，则学生对应的教室也会被删除
 //1.3.5-Deny（拒绝）
 //如果设置教室相对于学生的删除关联为Deny，则表示：只要教室存在，就无法删除学生，要想删除学生，就要先删除教室
+- (void)doTestThreadCoredata
+{
+    NSURL *url = [[NSBundle mainBundle] URLForResource:@"Animation" withExtension:@"momd"];
+    NSManagedObjectModel *model = [[NSManagedObjectModel alloc] initWithContentsOfURL:url];
+    _psc = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:model];
+    NSString * path = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).lastObject;
+    path = [path stringByAppendingFormat:@"/%@.sqlite",@"Animation"];
+    [_psc addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:[NSURL fileURLWithPath:path] options:nil error:nil];
+    
+    NSManagedObjectContext * mainMoc = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
+    mainMoc.persistentStoreCoordinator = _psc;
+    
+    NSManagedObjectContext *backMoc = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
+    backMoc.parentContext = mainMoc;
+    
+    BooksEntity *book = [NSEntityDescription insertNewObjectForEntityForName:@"BooksEntity" inManagedObjectContext:mainMoc];
+    book.bookName = @"SSSSS";
+    book.price = @20;
+    
+    [backMoc performBlock:^{
+        [backMoc save:nil];
+        [mainMoc performBlock:^{
+            [mainMoc save:nil];
+        }];
+    }];
+}
 - (void)testMaoPao
 {
     NSHashTable *table = [NSHashTable  hashTableWithOptions:NSHashTableWeakMemory];
