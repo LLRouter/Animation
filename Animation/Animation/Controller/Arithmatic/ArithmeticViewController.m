@@ -15,6 +15,11 @@
 #import "StudentClass+CoreDataClass.h"
 #import "BooksEntity+CoreDataClass.h"
 
+#import <ShareSDK/ShareSDK.h>
+#import <ShareSDKUI/ShareSDKUI.h>
+#import <ShareSDKUI/SSUIShareActionSheetStyle.h>
+#import <ShareSDK/ShareSDK+Base.h>
+
 #define  MainApplication ((AppDelegate *)[UIApplication sharedApplication].delegate)
 
 @interface ArithmeticViewController ()
@@ -34,7 +39,8 @@
     [super viewDidLoad];
     self.view.backgroundColor = UIColor.whiteColor;
     // Do any additional setup after loading the view from its nib.
-    [self testMaoPao];
+//    [self testMaoPao];
+    [self learnTree];
 //    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
 //    btn.frame = CGRectMake(20, 100, 100, 40);
 //    [btn setTitle:@"read" forState:UIControlStateNormal];
@@ -74,7 +80,7 @@
     };
     [self.view addSubview:btnClass];
     
-    [self doTestThreadCoredata];
+//    [self doTestThreadCoredata];
     
     // 修改导航栏返回按钮
     if (@available(iOS 11.0,*)){
@@ -92,7 +98,7 @@
         
         [UINavigationBar appearance].backIndicatorTransitionMaskImage =backButtonImage;
     }
-    [self doTest];
+//    [self doTest];
 }
 - (void)doTest
 {
@@ -110,8 +116,9 @@
     student.sex = @"男";
    
     [class addRelationshipObject:student]; //如果不想加这句可以在coredata 模型里面的relationship设置双向关联（inverse）
- 
-    [delegate saveContext];
+    [delegate.persistentContainer.viewContext performBlock:^{
+        [delegate saveContext];
+    }];
 }
 - (void)doReadClass
 {
@@ -251,12 +258,23 @@
             NSLog(@"排序结果%@",arr);
         }
     }
-    NSLog(@"选择排序完成后,数组内容为：%@",arr);
+    NSLog(@"排序完成后,数组内容为：%@",arr);
 }
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)learnTree
+{
+    NSArray *dataArray = @[@"2014-04-01",@"2014-04-02",@"2014-04-03",
+                           @"2014-04-01",@"2014-04-02",@"2014-04-03",
+                           @"2014-04-01",@"2014-04-03",@"2014-04-03",
+                           @"2014-04-01",@"2014-04-02",@"2014-04-03",
+                           @"2014-04-01",@"2014-04-02",@"2014-04-03",
+                           @"2014-04-01",@"2014-04-02",@"2014-04-03",
+                           @"2014-04-04",@"2014-04-06",@"2014-04-08",
+                           @"2014-04-05",@"2014-04-07",@"2014-04-09",];
+    dataArray = [dataArray valueForKeyPath:@"@distinctUnionOfObjects.self"];
+    NSLog(@"%@",dataArray);
+    
+    NSSet * set = [NSSet setWithArray:dataArray];
+    NSLog(@"%@",[set allObjects]);
 }
-
 
 @end

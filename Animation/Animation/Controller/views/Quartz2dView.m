@@ -56,13 +56,8 @@
          endA = startA + [num floatValue] / total * 2 * M_PI;
          UIBezierPath *circle = [UIBezierPath bezierPathWithArcCenter:center radius:radiusA startAngle:startA endAngle:endA clockwise:YES];
         [circle addLineToPoint:center];
-        
-        CGFloat randRed = arc4random_uniform(256)/255.0;
-        CGFloat randGreen = arc4random_uniform(256)/255.0;
-        CGFloat randBlue = arc4random_uniform(256)/255.0;
-        
-        UIColor *randomColor = [UIColor colorWithRed:randRed green:randGreen blue:randBlue alpha:1.0];
-        [randomColor set];
+    
+        [[self randomColor] set];
         
         [circle fill];
     }

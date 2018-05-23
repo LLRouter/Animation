@@ -8,6 +8,12 @@
 
 #import "AppDelegate.h"
 #import "RootViewController.h"
+#import <ShareSDK/ShareSDK.h>
+#import <ShareSDKConnector/ShareSDKConnector.h>
+
+#import <TencentOpenAPI/QQApiInterface.h>
+#import <TencentOpenAPI/TencentOAuth.h>
+#import "WXApi.h"
 
 @interface AppDelegate ()
 
@@ -21,6 +27,42 @@
     UINavigationController *navVc = [[UINavigationController alloc] initWithRootViewController:[RootViewController new]];
     self.window.rootViewController = navVc;
     [self.window makeKeyAndVisible];
+    
+    [ShareSDK registerActivePlatforms:@[
+                                        @(SSDKPlatformTypeSinaWeibo),
+                                        @(SSDKPlatformSubTypeQZone),
+                                        @(SSDKPlatformSubTypeQQFriend),
+                                        @(SSDKPlatformSubTypeWechatTimeline),
+                                        @(SSDKPlatformSubTypeWechatSession)
+                                        ] onImport:^(SSDKPlatformType platformType) {
+                                            switch (platformType){
+                                                case SSDKPlatformTypeWechat:
+                                                    [ShareSDKConnector connectWeChat:[WXApi class]];
+                                                    break;
+                                                case SSDKPlatformTypeQQ:
+                                                    [ShareSDKConnector connectQQ:[QQApiInterface class] tencentOAuthClass:[TencentOAuth class]];
+                                                    break;
+                                                default:
+                                                    break;
+                                            }
+                                            
+                                        } onConfiguration:^(SSDKPlatformType platformType, NSMutableDictionary *appInfo) {
+                                            switch (platformType){
+                                                case SSDKPlatformTypeWechat:
+                                                    [appInfo SSDKSetupWeChatByAppId:@"wx259982dc38c572bf"
+                                                                          appSecret:@"f2a9377b0a56e591b896a8a2eaac686d"];
+                                                    break;
+                                                case SSDKPlatformTypeQQ:
+                                                    [appInfo SSDKSetupQQByAppId:@"1101162211"
+                                                                         appKey:@"znKY4zMm1LxO9epY"
+                                                                       authType:SSDKAuthTypeBoth];
+                                                    break;
+                                                default:
+                                                    break;
+                                            }
+                                            
+                                        }];
+    
     
     return YES;
 }
