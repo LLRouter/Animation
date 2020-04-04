@@ -16,13 +16,15 @@
     
     //2.描述路径
     //2.1 创建路径
-    CGContextMoveToPoint(ctx, 14, 80);
-    //2.2 添加线到一个点
-    CGContextAddLineToPoint(ctx, 45, 150);
-    CGContextAddLineToPoint(ctx, 30, 200);
+    CGPoint pionts[] = {{10, 100}, {40, 100}, {40, 200}};
+    CGContextSetLineWidth(ctx, 2);
+    CGFloat length[] = {5,10,5};
+    CGContextSetLineDash(ctx, 5, length, 3);
+    CGContextAddLines(ctx, pionts, 3);
     CGContextSetRGBStrokeColor(ctx, 0, 111, 188, 1);
     CGContextSetLineCap(ctx, kCGLineCapRound);
     CGContextSetLineJoin(ctx, kCGLineJoinMiter);
+    CGContextSetShadowWithColor(ctx, CGSizeMake(2, 2), 0.3, UIColor.whiteColor.CGColor);
     //3.完成路线
     CGContextClosePath(ctx);
     CGContextStrokePath(ctx);
@@ -35,6 +37,13 @@
     CGContextAddArc(ctx, x, y, radius, - M_PI_2, M_PI_2, NO);
     CGContextClosePath(ctx);
     CGContextStrokePath(ctx);
+    
+    // 绘制多条线段
+    CGPoint points[] = {{0, 200}, {30, 200}, {0, 300},{80, 300}};
+    CGContextSetStrokeColorWithColor(ctx, [UIColor purpleColor].CGColor);
+    CGContextStrokeLineSegments(ctx, points, 4);
+    CGContextStrokePath(ctx);
+    
     
     CGFloat floatX = 200;
     CGFloat floatY = 200;

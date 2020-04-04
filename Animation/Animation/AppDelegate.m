@@ -14,6 +14,7 @@
 #import <TencentOpenAPI/QQApiInterface.h>
 #import <TencentOpenAPI/TencentOAuth.h>
 #import "WXApi.h"
+#import "AFNetworkReachabilityManager.h"
 
 @interface AppDelegate ()
 
@@ -28,40 +29,21 @@
     self.window.rootViewController = navVc;
     [self.window makeKeyAndVisible];
     
-    [ShareSDK registerActivePlatforms:@[
-                                        @(SSDKPlatformTypeSinaWeibo),
-                                        @(SSDKPlatformSubTypeQZone),
-                                        @(SSDKPlatformSubTypeQQFriend),
-                                        @(SSDKPlatformSubTypeWechatTimeline),
-                                        @(SSDKPlatformSubTypeWechatSession)
-                                        ] onImport:^(SSDKPlatformType platformType) {
-                                            switch (platformType){
-                                                case SSDKPlatformTypeWechat:
-                                                    [ShareSDKConnector connectWeChat:[WXApi class]];
-                                                    break;
-                                                case SSDKPlatformTypeQQ:
-                                                    [ShareSDKConnector connectQQ:[QQApiInterface class] tencentOAuthClass:[TencentOAuth class]];
-                                                    break;
-                                                default:
-                                                    break;
-                                            }
-                                            
-                                        } onConfiguration:^(SSDKPlatformType platformType, NSMutableDictionary *appInfo) {
-                                            switch (platformType){
-                                                case SSDKPlatformTypeWechat:
-                                                    [appInfo SSDKSetupWeChatByAppId:@"wx259982dc38c572bf"
-                                                                          appSecret:@"f2a9377b0a56e591b896a8a2eaac686d"];
-                                                    break;
-                                                case SSDKPlatformTypeQQ:
-                                                    [appInfo SSDKSetupQQByAppId:@"1101162211"
-                                                                         appKey:@"znKY4zMm1LxO9epY"
-                                                                       authType:SSDKAuthTypeBoth];
-                                                    break;
-                                                default:
-                                                    break;
-                                            }
-                                            
-                                        }];
+    AFNetworkReachabilityManager *netManager = [AFNetworkReachabilityManager sharedManager];
+    [netManager startMonitoring];  //开始监听
+    [netManager setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status){
+        
+        if (status == AFNetworkReachabilityStatusNotReachable)
+        {
+            NSLog(@"网络不可用");
+        }else if (status == AFNetworkReachabilityStatusUnknown){
+            
+            NSLog(@"未知网络");
+        }else if ((status == AFNetworkReachabilityStatusReachableViaWWAN)||(status == AFNetworkReachabilityStatusReachableViaWiFi)){
+            NSLog(@"有网络");
+        }
+    
+    }];
     
     
     return YES;

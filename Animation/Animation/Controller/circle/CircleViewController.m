@@ -8,6 +8,7 @@
 
 #import "CircleViewController.h"
 #import "CircleNextViewController.h"
+#import "AFNetworking.h"
 
 @interface CircleViewController ()
 
@@ -32,6 +33,17 @@
     
     UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(pan:)];
     [btn addGestureRecognizer:pan];
+    
+//    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+//    manager.responseSerializer = [[AFHTTPResponseSerializer alloc]init];
+//    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html",@"application/json",@"text/plain",nil];
+//    manager.requestSerializer = [[AFHTTPRequestSerializer alloc]init];
+//    [manager.requestSerializer setValue:@"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI0MTMzODYxMzg1NDAwNjE0OTEyIiwiYXVkIjpbInVzZXJUeXBlOkN1c3RvbWVycyIsInRva2VuVHlwZTphY2Nlc3NUb2tlbiJdLCJpc3MiOiIqLmhpZ2hsYW5kcy5sdGQiLCJleHAiOjE1NTQyOTY2NzV9.zyFURqdJszz462Phu39rZaqn3ES2_BTdmy_x6I59K6Y" forHTTPHeaderField:@"Authorization"];
+//    [manager PUT:@"http://jxb-api.test.highlands.ltd/api/v1/tenant/1/app/course/feedback" parameters:@{@"feedbackType":@"1",@"content":@"12312"} success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+//        NSLog(@"成功");
+//    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+//        NSLog(@"失败");
+//    }];
 }
 - (CGRect)buttonFrame
 {

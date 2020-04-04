@@ -22,7 +22,9 @@
 
 #define  MainApplication ((AppDelegate *)[UIApplication sharedApplication].delegate)
 
-@interface ArithmeticViewController ()
+@interface ArithmeticViewController (){
+    UIView * _view1;
+}
 
 @property(nonatomic)UITextField * predicate;
 @property(nonatomic)NSPersistentStoreCoordinator *psc;
@@ -40,7 +42,7 @@
     self.view.backgroundColor = UIColor.whiteColor;
     // Do any additional setup after loading the view from its nib.
 //    [self testMaoPao];
-    [self learnTree];
+//    [self learnTree];
 //    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
 //    btn.frame = CGRectMake(20, 100, 100, 40);
 //    [btn setTitle:@"read" forState:UIControlStateNormal];
@@ -82,17 +84,19 @@
     
 //    [self doTestThreadCoredata];
     
+    [self testTransform];
+    
     // 修改导航栏返回按钮
     if (@available(iOS 11.0,*)){
         [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(-200, 0) forBarMetrics:UIBarMetricsDefault];
         
-        UIImage *image = [[UIImage imageNamed:@"navigation_back_pressed"] imageWithRenderingMode:(UIImageRenderingModeAlwaysOriginal)];
+        UIImage *image = [[UIImage imageNamed:@"btn_icon_back_default"] imageWithRenderingMode:(UIImageRenderingModeAlwaysOriginal)];
         
         [[UIBarButtonItem appearance] setBackButtonBackgroundImage:[image resizableImageWithCapInsets:UIEdgeInsetsMake(0,image.size.width, 0, 0)] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
     }else{
         [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(-200, -10) forBarMetrics:UIBarMetricsDefault];
         
-        UIImage *backButtonImage = [[UIImage imageNamed:@"navigation_back_pressed"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        UIImage *backButtonImage = [[UIImage imageNamed:@"btn_icon_back_default"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         
         [UINavigationBar appearance].backIndicatorImage = backButtonImage;
         
@@ -275,6 +279,37 @@
     
     NSSet * set = [NSSet setWithArray:dataArray];
     NSLog(@"%@",[set allObjects]);
+}
+- (void)testTransform{
+    _view1 = [UIView new];
+    _view1.backgroundColor = UIColor.greenColor;
+    _view1.frame = CGRectMake(50, 300, 200, 200);
+    [self.view addSubview:_view1];
+    
+}
+
+
+//{CGFloat     m11（x缩放）,    m12（y切变）,      m13（旋转）,     m14（）;
+// CGFloat     m21（x切变）,    m22（y缩放）,      m23（）       ,    m24（）;
+// CGFloat     m31（旋转）  ,    m32（ ）       , m33（）       ,    m34（透视效果，要操作的这个对象要有旋转的角度，否则没有效果。正直/负值都有意义）;
+// CGFloat     m41（x平移）,     m42（y平移）,     m43（z平移） ,     m44（）;};
+
+//CATransform3D CATransform3DMakeTranslation (CGFloat tx, CGFloat ty, CGFloat tz)
+//tx：X轴偏移位置，往下为正数。
+//
+//ty：Y轴偏移位置，往右为正数。
+//
+//tz：Z轴偏移位置，往外为正数。
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [UIView animateWithDuration:1 animations:^{
+//        _view1.transform = CGAffineTransformMake(0.2, 0, 0, 0.2, 0, 0);
+//        _view1.transform = CGAffineTransformScale(_view1.transform, 0.2, 0.2);
+//        _view1.layer.transform = CATransform3DMakeScale(0.2, 0.2, 1);
+ //       _view1.layer.transform = CATransform3DMakeTranslation(20, 20, 1);
+        _view1.layer.transform = CATransform3DMakeRotation(M_PI, 0, 0, 1);
+    }];
+
 }
 
 @end

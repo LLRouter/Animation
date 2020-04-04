@@ -16,6 +16,7 @@
 #import "ArithmeticViewController.h"
 #import <WAAppRouting/WAAppRouting.h>
 #import "Quartz2DViewController.h"
+#import "LSCommandTableController.h"
 
 @interface RootViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -34,7 +35,6 @@
     
     self.navigationController.view.layer.cornerRadius = 10;
     self.navigationController.view.layer.masksToBounds = YES;
-//    [self.navigationController.navigationBar setBackgroundColor:[UIColor orangeColor]];
     [self.navigationController.navigationBar setBarTintColor:UIColor.orangeColor];
 //    self.navigationController.hidesBarsOnSwipe = YES;
     self.title = @"ROOT VIEW CONTROLLER";
@@ -42,7 +42,7 @@
     [self creatTable];
     //[self createView];
     //  [self labelMade];
-   // [self imageLabel];
+  //  [self imageLabel];
     // Do any additional setup after loading the view, typically from a nib.、
     [self testBlock];
     [self.tabelView addObserver:self forKeyPath:@"contentOffset" options:NSKeyValueObservingOptionNew context:nil];
@@ -142,7 +142,7 @@
     self.tabelView.delegate = self;
     self.tabelView.dataSource = self;
     [self.view addSubview:self.tabelView];
-    self.dataArray = [NSMutableArray arrayWithArray:@[@"Present视图",@"字体",@"CirclePresent",@"Reactive Cocoa",@"Arithmetic",@"Quartz2D"]];
+    self.dataArray = [NSMutableArray arrayWithArray:@[@"Present视图",@"字体",@"CirclePresent",@"Reactive Cocoa",@"Arithmetic",@"Quartz2D",@"命令模式"]];
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -180,6 +180,9 @@
             break;
         case 5:
             vc = [Quartz2DViewController new];
+            break;
+        case 6:
+            vc = [LSCommandTableController new];
             break;
         default:
             break;
@@ -295,8 +298,8 @@
     attachment.image = [UIImage imageNamed:@"pic1.jpg"];
     //这里bounds的x值并不会产生影响
     attachment.bounds = CGRectMake(-600, 0, 20, 10);
-    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:@"这是一串字"];
-    [attributedString appendAttributedString:[NSAttributedString attributedStringWithAttachment:attachment]];
+    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:@"这是一串字黄呢撒旦教搜集的哦啊就搜到骄傲四季豆拿时间都我祭扫ID祭扫街道四季都爱时间哦ID骄傲奥迪叫我激动我祭扫ID奇偶我爱上京东我安静哦我爱神的箭偶爱设计的"];
+    [attributedString insertAttributedString:[NSAttributedString attributedStringWithAttachment:attachment] atIndex:0];
     testLabel.attributedText = attributedString;
 }
 

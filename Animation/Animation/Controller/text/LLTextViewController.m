@@ -9,11 +9,14 @@
 #import "LLTextViewController.h"
 #import "HighLightTextStorage.h"
 #import "LLTextContainer.h"
+#import "LLTimerManager.h"
+#import "CADisplayLink+LSLinkManager.h"
 
 @interface LLTextViewController () <UITextViewDelegate,NSLayoutManagerDelegate>
 {
     CAGradientLayer *_gradientlayer;
-    CADisplayLink *_link;
+    CADisplayLink *_link1;
+    CADisplayLink *_link2;
 }
 
 @property (nonatomic, strong) UITextView *originalTextView;
@@ -29,27 +32,24 @@
     [super viewDidLoad];
     self.view.backgroundColor = UIColor.whiteColor;
     
-    _otherContainerView = [[UIView alloc] initWithFrame:CGRectMake(20, 100, 300, 100)];
-    _otherContainerView.backgroundColor = UIColor.lightGrayColor;
-    _otherTextView = [[UITextView alloc] initWithFrame:CGRectMake(20, 220, 300, 100)];
-    [self.view addSubview:_otherTextView];
-    [self.view addSubview:_otherContainerView];
-//    [self textKitLearn];
-    [self createMarkupTextView];
-    [_otherContainerView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.width.equalTo(self.view).multipliedBy(0.2);
-    }];
-    
+//    _otherContainerView = [[UIView alloc] initWithFrame:CGRectMake(20, 100, 300, 100)];
+//    _otherContainerView.backgroundColor = UIColor.lightGrayColor;
+//    _otherTextView = [[UITextView alloc] initWithFrame:CGRectMake(20, 220, 300, 100)];
+//    [self.view addSubview:_otherTextView];
+//    [self.view addSubview:_otherContainerView];
+////    [self textKitLearn];
+//    [self createMarkupTextView];
+//    [_otherContainerView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.width.equalTo(self.view).multipliedBy(0.2);
+//    }];
+
     UILabel *label = [[UILabel alloc] init];
     label.text = @"带我去多群当前http://www.baidu.com带我去多群当前http://www.baidu.com手动的撒多大萨达萨达大叔大萨达多我气得萨达阿萨德http://www.goole.com撒旦去的寝室的群多渠道强打书到南京去哪玩你欠我的交警都跑区奇偶碰到就破去我家都件券哦碰";
     label.numberOfLines = 0;
-    [label  sizeToFit];
+    label.frame = CGRectMake(10, 80, 300, 300);
+    [label sizeToFit];
     [self.view addSubview:label];
-    [label mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(_otherContainerView).offset(40);
-        make.bottom.right.equalTo(self.view).offset(-20);
-    }];
-    
+
     _gradientlayer = [CAGradientLayer layer];
     _gradientlayer.colors = @[(__bridge id)[self randomColor].CGColor,(__bridge id)[self randomColor].CGColor];
     _gradientlayer.frame = label.frame;
@@ -58,12 +58,37 @@
     [self.view.layer addSublayer:_gradientlayer];
     _gradientlayer.mask = label.layer;
     label.frame = _gradientlayer.bounds;
+//
+   @weakify(self)
+//   _link1 = [[LLTimerManager shareInstance] createTimer:^{
+//        @strongify(self)
+//        [self textColorChange];
+//    }];
+//   _link2 = [[LLTimerManager shareInstance] createTimer:^{
+//        @strongify(self)
+//        NSLog(@"%@",[self randomColor]);
+//    }];
     
-    _link = [CADisplayLink displayLinkWithTarget:self selector:@selector(textColorChange)];
-    _link.frameInterval = 5;
-    [_link addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
-  //  [self runloopTest];
+    //   [self runloopTest];
+    //    [self labelMade];
     
+    
+    _link1 = [CADisplayLink ls_displayLinkWithTimeInterval:10 run:^{
+        @strongify(self)
+        [self textColorChange];
+    }];
+//    _link2 = [CADisplayLink ls_displayLinkWithTimeInterval:5 run:^{
+//        @strongify(self)
+//       NSLog(@"%@",[self randomColor]);
+//    }];
+    
+}
+- (void)dealloc{
+//    [[LLTimerManager shareInstance] releaseTimer:_link2];
+//    [[LLTimerManager shareInstance] releaseTimer:_link1];
+    [_link2 invalidate];
+    [_link1 invalidate];
+    NSLog(@"----dealloc----");
 }
 - (void)runloopTest
 {
@@ -76,10 +101,12 @@
         [[NSRunLoop currentRunLoop] run];
     });
 }
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+}
 - (void)viewDidDisappear:(BOOL)animated
 {
     [super viewDidDisappear:animated];
-    [_link removeFromRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
 }
 
 - (void)createMarkupTextView
@@ -93,7 +120,7 @@
     _textStorage = [[HighLightTextStorage alloc] init];
     [_textStorage setAttributedString:attributedString];
     
-    CGRect textViewRect = CGRectMake(20, 60, 280, self.view.bounds.size.height - 100);
+    CGRect textViewRect = CGRectMake(20, 100, 280, self.view.bounds.size.height - 100);
     
     NSLayoutManager *layoutManager = [[NSLayoutManager alloc] init];
     layoutManager.delegate = self;
@@ -252,7 +279,7 @@
     [attributedString appendAttributedString:attr8];
     
     //设置文本附件，取值为NSTextAttachment对象，常用于文字的图文混排
-    NSString *str9 = @"文字的图文混排";
+    NSString *str9 = @"文字的图文混排   ";
     NSTextAttachment *textAttachment = [[NSTextAttachment alloc]init];
     textAttachment.image = [UIImage imageNamed:@"pic1.jpg"];
     textAttachment.bounds = CGRectMake(0, 0, 40, 20);

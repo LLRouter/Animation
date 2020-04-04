@@ -12,12 +12,12 @@
 @implementation UIViewController (LLController)
 +(void)load
 {
-    [self aspect_hookSelector:@selector(viewWillAppear:) withOptions:AspectPositionAfter usingBlock:^(id<AspectInfo> aspectInfo){
-            NSLog(@"aspect view will appear--- %@--%@---%@",aspectInfo.instance,aspectInfo.originalInvocation,aspectInfo.arguments);
-        if ([aspectInfo.instance isKindOfClass:[UIViewController class]]) {
-            UIViewController *hookVc = (UIViewController *)aspectInfo.instance;
-         }
-    } error:nil];
+//    [self aspect_hookSelector:@selector(viewWillAppear:) withOptions:AspectPositionAfter usingBlock:^(id<AspectInfo> aspectInfo){
+//            NSLog(@"aspect view will appear--- %@--%@---%@",aspectInfo.instance,aspectInfo.originalInvocation,aspectInfo.arguments);
+//        if ([aspectInfo.instance isKindOfClass:[UIViewController class]]) {
+//            UIViewController *hookVc = (UIViewController *)aspectInfo.instance;
+//         }
+//    } error:nil];
 }
 // 类方法的拦截
 //Class catMetal = objc_getMetaClass(NSStringFromClass(Cat.class).UTF8String);

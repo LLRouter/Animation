@@ -7,12 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE3011C421BE57AA001348AF /* LLTimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3011C321BE57AA001348AF /* LLTimerManager.m */; };
+		CE3011C721BF8E40001348AF /* CADisplayLink+LSLinkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3011C621BF8E40001348AF /* CADisplayLink+LSLinkManager.m */; };
+		CE548E5A2159FDC30044903F /* circleProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = CE548E592159FDC30044903F /* circleProgress.m */; };
+		CEA0FDA721C0DD7700FC503D /* LSCommandTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA0FDA621C0DD7700FC503D /* LSCommandTableController.m */; };
+		CEA0FDAB21C0DE5200FC503D /* BaseCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA0FDAA21C0DE5200FC503D /* BaseCommand.m */; };
+		CEA0FDAE21C0DEBD00FC503D /* LightCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA0FDAD21C0DEBD00FC503D /* LightCommand.m */; };
+		CEA0FDB121C0DEE500FC503D /* Light.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA0FDB021C0DEE500FC503D /* Light.m */; };
+		CED3EB1D20E4DB5200025813 /* btn_icon_back_default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CED3EB1C20E4DB5200025813 /* btn_icon_back_default@2x.png */; };
 		F32393E61FBAB71C00AED156 /* LLTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F32393E51FBAB71B00AED156 /* LLTextViewController.m */; };
 		F32394041FBAE12300AED156 /* HighLightTextStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = F32394031FBAE12300AED156 /* HighLightTextStorage.m */; };
 		F32C4D7420804B270073FD47 /* Quartz2DViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F32C4D7320804B270073FD47 /* Quartz2DViewController.m */; };
 		F32C4D782080524D0073FD47 /* Quartz2dView.m in Sources */ = {isa = PBXBuildFile; fileRef = F32C4D772080524D0073FD47 /* Quartz2dView.m */; };
 		F32EA45C1FB15E820009D1AD /* LLThreadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F32EA45B1FB15E820009D1AD /* LLThreadViewController.m */; };
-		F3333C5020844BB60027CA07 /* navigation_back_pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F3333C4F20844B170027CA07 /* navigation_back_pressed@2x.png */; };
 		F33B225D1FAAE0770085EFF1 /* CircleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F33B225C1FAAE0770085EFF1 /* CircleViewController.m */; };
 		F33B22601FAAE0C80085EFF1 /* CircleNextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F33B225F1FAAE0C80085EFF1 /* CircleNextViewController.m */; };
 		F33B22631FAAE5F10085EFF1 /* CircleViewControllerTrasition.m in Sources */ = {isa = PBXBuildFile; fileRef = F33B22621FAAE5F10085EFF1 /* CircleViewControllerTrasition.m */; };
@@ -60,6 +67,21 @@
 		5A5F5EFBDA811376D40E4B56 /* Pods-Animation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Animation.release.xcconfig"; path = "Pods/Target Support Files/Pods-Animation/Pods-Animation.release.xcconfig"; sourceTree = "<group>"; };
 		5D9D9FAE319D7A6AAB2A6A3D /* Pods_Animation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Animation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B675823BC7DEB0C9700950D6 /* Pods-Animation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Animation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Animation/Pods-Animation.debug.xcconfig"; sourceTree = "<group>"; };
+		CE3011C221BE57AA001348AF /* LLTimerManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLTimerManager.h; sourceTree = "<group>"; };
+		CE3011C321BE57AA001348AF /* LLTimerManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLTimerManager.m; sourceTree = "<group>"; };
+		CE3011C521BF8E40001348AF /* CADisplayLink+LSLinkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CADisplayLink+LSLinkManager.h"; sourceTree = "<group>"; };
+		CE3011C621BF8E40001348AF /* CADisplayLink+LSLinkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CADisplayLink+LSLinkManager.m"; sourceTree = "<group>"; };
+		CE548E582159FDC30044903F /* circleProgress.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = circleProgress.h; sourceTree = "<group>"; };
+		CE548E592159FDC30044903F /* circleProgress.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = circleProgress.m; sourceTree = "<group>"; };
+		CEA0FDA521C0DD7700FC503D /* LSCommandTableController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSCommandTableController.h; sourceTree = "<group>"; };
+		CEA0FDA621C0DD7700FC503D /* LSCommandTableController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSCommandTableController.m; sourceTree = "<group>"; };
+		CEA0FDA921C0DE5200FC503D /* BaseCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseCommand.h; sourceTree = "<group>"; };
+		CEA0FDAA21C0DE5200FC503D /* BaseCommand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseCommand.m; sourceTree = "<group>"; };
+		CEA0FDAC21C0DEBD00FC503D /* LightCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LightCommand.h; sourceTree = "<group>"; };
+		CEA0FDAD21C0DEBD00FC503D /* LightCommand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LightCommand.m; sourceTree = "<group>"; };
+		CEA0FDAF21C0DEE500FC503D /* Light.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Light.h; sourceTree = "<group>"; };
+		CEA0FDB021C0DEE500FC503D /* Light.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Light.m; sourceTree = "<group>"; };
+		CED3EB1C20E4DB5200025813 /* btn_icon_back_default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_icon_back_default@2x.png"; sourceTree = "<group>"; };
 		F30A179C2085DE03002A5D0A /* Animation.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Animation.xcdatamodel; sourceTree = "<group>"; };
 		F32393E41FBAB71B00AED156 /* LLTextViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLTextViewController.h; sourceTree = "<group>"; };
 		F32393E51FBAB71B00AED156 /* LLTextViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLTextViewController.m; sourceTree = "<group>"; };
@@ -72,7 +94,6 @@
 		F32C4D772080524D0073FD47 /* Quartz2dView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Quartz2dView.m; sourceTree = "<group>"; };
 		F32EA45A1FB15E820009D1AD /* LLThreadViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLThreadViewController.h; sourceTree = "<group>"; };
 		F32EA45B1FB15E820009D1AD /* LLThreadViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLThreadViewController.m; sourceTree = "<group>"; };
-		F3333C4F20844B170027CA07 /* navigation_back_pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigation_back_pressed@2x.png"; sourceTree = "<group>"; };
 		F33B225B1FAAE0770085EFF1 /* CircleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CircleViewController.h; sourceTree = "<group>"; };
 		F33B225C1FAAE0770085EFF1 /* CircleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CircleViewController.m; sourceTree = "<group>"; };
 		F33B225E1FAAE0C80085EFF1 /* CircleNextViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CircleNextViewController.h; sourceTree = "<group>"; };
@@ -229,6 +250,29 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CEA0FDA421C0DD5200FC503D /* CommandPattern */ = {
+			isa = PBXGroup;
+			children = (
+				CEA0FDA821C0DE3A00FC503D /* LSCommandManager */,
+				CEA0FDA521C0DD7700FC503D /* LSCommandTableController.h */,
+				CEA0FDA621C0DD7700FC503D /* LSCommandTableController.m */,
+			);
+			path = CommandPattern;
+			sourceTree = "<group>";
+		};
+		CEA0FDA821C0DE3A00FC503D /* LSCommandManager */ = {
+			isa = PBXGroup;
+			children = (
+				CEA0FDA921C0DE5200FC503D /* BaseCommand.h */,
+				CEA0FDAA21C0DE5200FC503D /* BaseCommand.m */,
+				CEA0FDAC21C0DEBD00FC503D /* LightCommand.h */,
+				CEA0FDAD21C0DEBD00FC503D /* LightCommand.m */,
+				CEA0FDAF21C0DEE500FC503D /* Light.h */,
+				CEA0FDB021C0DEE500FC503D /* Light.m */,
+			);
+			path = LSCommandManager;
+			sourceTree = "<group>";
+		};
 		DC8E2CF03265B1B528FF14B3 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -254,6 +298,7 @@
 		F3281C951FA84B3A00116303 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				CEA0FDA421C0DD5200FC503D /* CommandPattern */,
 				F32C4D7520804B750073FD47 /* views */,
 				F342DEF81FA9B54E00C6C93D /* LLInterActiveTransition.h */,
 				F342DEF91FA9B54E00C6C93D /* LLInterActiveTransition.m */,
@@ -281,6 +326,8 @@
 			children = (
 				F32C4D762080524D0073FD47 /* Quartz2dView.h */,
 				F32C4D772080524D0073FD47 /* Quartz2dView.m */,
+				CE548E582159FDC30044903F /* circleProgress.h */,
+				CE548E592159FDC30044903F /* circleProgress.m */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -297,7 +344,7 @@
 		F3333C4D20844A530027CA07 /* images */ = {
 			isa = PBXGroup;
 			children = (
-				F3333C4F20844B170027CA07 /* navigation_back_pressed@2x.png */,
+				CED3EB1C20E4DB5200025813 /* btn_icon_back_default@2x.png */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -566,6 +613,10 @@
 				F364C8281FFB2047002440E2 /* UIFont+CustomFont.m */,
 				F33B5E831FFDED4200C05363 /* UIViewController+LLController.h */,
 				F33B5E841FFDED4200C05363 /* UIViewController+LLController.m */,
+				CE3011C221BE57AA001348AF /* LLTimerManager.h */,
+				CE3011C321BE57AA001348AF /* LLTimerManager.m */,
+				CE3011C521BF8E40001348AF /* CADisplayLink+LSLinkManager.h */,
+				CE3011C621BF8E40001348AF /* CADisplayLink+LSLinkManager.m */,
 			);
 			path = "Reactive Cocoa";
 			sourceTree = "<group>";
@@ -676,7 +727,7 @@
 				TargetAttributes = {
 					F3F118191F6A5C85000897BE = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 854WB9SEC4;
+						DevelopmentTeam = VCMMMLF698;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -704,11 +755,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3333C5020844BB60027CA07 /* navigation_back_pressed@2x.png in Resources */,
 				F364C8261FFB1EEA002440E2 /* Microsoft Yahei.ttf in Resources */,
 				F3E2C75D1F71069800B26F77 /* pic1.jpg in Resources */,
 				F3F118301F6A5C86000897BE /* LaunchScreen.storyboard in Resources */,
 				F3F1182D1F6A5C86000897BE /* Assets.xcassets in Resources */,
+				CED3EB1D20E4DB5200025813 /* btn_icon_back_default@2x.png in Resources */,
 				F33E05F42016D16000A87A0D /* ArithmeticViewController.xib in Resources */,
 				F3F118281F6A5C86000897BE /* Main.storyboard in Resources */,
 			);
@@ -748,6 +799,8 @@
 				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/WAAppRouting/WAAppRouting.framework",
+				"${BUILT_PRODUCTS_DIR}/YJBannerView/YJBannerView.framework",
+				"${BUILT_PRODUCTS_DIR}/YTKNetwork/YTKNetwork.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -760,6 +813,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WAAppRouting.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YJBannerView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YTKNetwork.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -791,13 +846,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEA0FDB121C0DEE500FC503D /* Light.m in Sources */,
+				CEA0FDAE21C0DEBD00FC503D /* LightCommand.m in Sources */,
 				F3CFFD181FD8E41B001F86E7 /* UIButton+ButtonClick.m in Sources */,
+				CE548E5A2159FDC30044903F /* circleProgress.m in Sources */,
 				F342DEF51FA9A91100C6C93D /* PresentNextViewController.m in Sources */,
+				CE3011C421BE57AA001348AF /* LLTimerManager.m in Sources */,
 				F34B2FBA1FC411D100465F0C /* RACViewController.m in Sources */,
 				F33B5E851FFDED4200C05363 /* UIViewController+LLController.m in Sources */,
 				F32394041FBAE12300AED156 /* HighLightTextStorage.m in Sources */,
 				F3607C2E1FDA3D01000BE9B8 /* NSMutableArray+LogAddObj.m in Sources */,
 				F33B22601FAAE0C80085EFF1 /* CircleNextViewController.m in Sources */,
+				CE3011C721BF8E40001348AF /* CADisplayLink+LSLinkManager.m in Sources */,
 				F3F118251F6A5C86000897BE /* RootViewController.m in Sources */,
 				F34B2FBD1FC412AB00465F0C /* RACNextViewController.m in Sources */,
 				F342DEF71FA9A91F00C6C93D /* PresentViewTransition.m in Sources */,
@@ -808,11 +868,13 @@
 				F33E05F32016D16000A87A0D /* ArithmeticViewController.m in Sources */,
 				F3F118221F6A5C86000897BE /* AppDelegate.m in Sources */,
 				F34258A5208736AE00B6B2E3 /* Animation.xcdatamodeld in Sources */,
+				CEA0FDAB21C0DE5200FC503D /* BaseCommand.m in Sources */,
 				F32C4D7420804B270073FD47 /* Quartz2DViewController.m in Sources */,
 				F33B22631FAAE5F10085EFF1 /* CircleViewControllerTrasition.m in Sources */,
 				F342DEFA1FA9B54E00C6C93D /* LLInterActiveTransition.m in Sources */,
 				F32EA45C1FB15E820009D1AD /* LLThreadViewController.m in Sources */,
 				F3413E551FBD307F0039CFA4 /* LLTextContainer.m in Sources */,
+				CEA0FDA721C0DD7700FC503D /* LSCommandTableController.m in Sources */,
 				F32C4D782080524D0073FD47 /* Quartz2dView.m in Sources */,
 				F33B225D1FAAE0770085EFF1 /* CircleViewController.m in Sources */,
 				F37C91FF1FBED8E7009D019B /* MathTest.m in Sources */,
@@ -873,7 +935,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -928,7 +990,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -949,8 +1011,8 @@
 			baseConfigurationReference = B675823BC7DEB0C9700950D6 /* Pods-Animation.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 854WB9SEC4;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				DEVELOPMENT_TEAM = VCMMMLF698;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Animation/OpenTool/SDK/Required",
@@ -995,8 +1057,8 @@
 			baseConfigurationReference = 5A5F5EFBDA811376D40E4B56 /* Pods-Animation.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 854WB9SEC4;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				DEVELOPMENT_TEAM = VCMMMLF698;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Animation/OpenTool/SDK/Required",
